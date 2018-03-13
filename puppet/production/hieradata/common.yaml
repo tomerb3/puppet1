@@ -1,0 +1,10 @@
+---
+#classes:
+  #- notepad_plus_plus
+message: "This node is using common data"
+
+
+npp:
+  npp_url: 'https://notepad-plus-plus.org/repository/7.x/7.5.1/npp.7.5.1.Installer.x64.exe'
+  npp_version: '7.5.1' 
+

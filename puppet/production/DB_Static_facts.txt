@@ -1,0 +1,4 @@
+#please copy this file to the application server C:\ProgramData\PuppetLabs\facter\facts.d\
+#and change the project fact to the correct client
+project=CORE
+role=DB

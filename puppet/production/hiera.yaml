@@ -1,0 +1,32 @@
+version: 5
+
+defaults:
+
+  #for master
+  datadir: /etc/puppetlabs/code/environments/%{environment}/hieradata/
+  
+  #for windows masterless 
+  datadir: c:/programdata/puppetlabs/code/environments/production/hieradata/
+  
+  data_hash: yaml_data
+
+hierarchy:
+  - name: "Nodes"
+    path: "nodes/%{::hostname}.yaml"
+
+  - name: "Client_data"
+    path: "%{::project}_CLIENT.yaml"
+
+  - name: "Project"
+    path: "%{::project}.yaml"
+
+  - name: "Role"
+    path: "%{::role}.yaml"
+    
+  - name: "Site"
+    path: "%{::site}.yaml"
+    
+  - name: "Common"
+    path: "common.yaml"
+
+

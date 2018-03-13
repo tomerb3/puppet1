@@ -1,0 +1,90 @@
+---  
+environments: 
+  ENV101: #The env name 
+    version: 'test1'
+    RequestQueueName: 'REQUEST.ALIS_UAT'
+    ResponseQueueName: 'RESPONSE.ALIS_UAT'
+    FISDatabase: 'auth_tfl_env200'
+    db_port: '1433'
+    DB_Server: 'alis-db-sql3'
+    FISUID: 'AlisUser'
+    FISPWD: '8o6tDB5d1jB1H5d2J'    
+    MQHostName: 'localhost'
+    MQPort: '61616'
+    sql_pass: 'it12345*'    
+    sql_user: 'AlisUser'
+    ad_enabled: 'no'
+    upv_files: 
+      - 'first-updatepreviousversion.sql' #core UPV
+      - 'second-updatepreviousversion.sql' #cust UPV
+    md_files:
+      - 'third-md_customer_full.sql'
+    db_list:
+      - 'auth_tfl_env200' #data DB
+      - 'dana_puppet_test' #data DB
+    bl:
+      ListenerCount: '3'
+      OCILoggerFolder_base_path: 'c:\AlisLogs\'
+      PERF_SETTINGS_base_path: 'FISDBMS,FISServer,FISDatabase,FISUID,FISPWD,PERF_SETTINGS'
+        
+    pl:
+      port: '8116'
+      source_war_name: 'alis_pl.war'
+      target_war_name: 'tfl_pl_env101'
+      services_url: 'http://alis-tfl-drapp:8083/alis_sl_uat'   
+      #in case of SSO please add the following:
+      sso_krb_debug: #capture rhe kerberos errors can by only true or false
+      sso_krb_service_prinicipal: # the domain name
+      sso_krb_keytab_location: # the keytab file for the host path
+      sso_ldapAdServer: #ldap server host name
+      sso_ldapSearchBase: #ldap search pase
+      sso_ldapUsername: #the ldap auth user name
+      sso_ldapPassword: # non encripted pass for thr ldap user  
+      dateDisplayFormat: 'MM/dd/yyyy'
+      dateInputFormats: 'MM/dd/yy MM/dd/yyyy MMddyy MMddyyyy'
+      currencyDisplayPattern: '$#,##0.00;-$#,##0.00'
+      alis_locale: 'en_US'
+      menu_view: 'shell/menu'
+      alis_theme: 'Alis'
+      about_date_display_format: 'yyyy-MM-dd HH:mm'
+      build_time_date_format: 'yyyyMMdd-HHmm'
+      show_internal_errors: 'true'
+      dev_mode: 'false'
+      enable_sso: 'false'
+      services_receiveTimeout: '18000'
+      alisPlLog4jExternalConfigPath: '${pl.root}/WEB-INF/conf/alis-pl-log4j.xml'
+      alisPlLogsPath: 'alis-pl-logs'
+      default_company_id: '1'
+      cacheIntegrityAlertLevel: 'KEEP_ORIGINAL_STRINGS'
+      max_trace_line_length: '250000'
+    sl:
+      port: '8117'
+      blEvent_inQueueName: 'BL.EVENT.ALIS'    
+      target_war_name: 'tfl_sl_env101'
+      integration_userName: 'Clerk'
+      source_war_name: 'alis_sl.war'
+      hibernate_schemaValidator: 'true'
+      mvrApplicationActivator: 'active'
+      intelliScriptApplicationActivator: 'active'
+      selfObjectFillerEnabled: 'true'
+      intelliScriptApplicationActivator: 'active'
+      monitor_path: '/WEB-INF/conf/monitor'
+      mq_path: 'file:${alisSlExternalConfigPath}'
+      spy_path: '${sl.root}/WEB-INF/conf'
+      log4j_path: '${sl.root}/WEB-INF/conf'
+      integration_companyId: '1'
+      integration_language: '1'
+      datasource_maxIdle: '50'
+      datasource_minIdle: '10'
+      datasource_maxActive: '100'
+      datasource_timeBetweenEvictionRunsMillis: '30000'
+      datasource_minEvictableIdleTimeMillis: '60000'
+      datasource_initialSize: '0'
+      taskExecutor_corePoolSize: '100'
+      taskExecutor_maxPoolSize: '300'
+      monitoringTaskExecutor.corePoolSize: '5'
+      monitoringTaskExecutor.maxPoolSize: '50'
+      monitoring.appendInOutObjects: 'true'
+      
+      
+      

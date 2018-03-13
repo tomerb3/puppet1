@@ -1,0 +1,11 @@
+---    
+MQ_type: # can be only 'AMQ' or 'IBM' 
+AppServer: #can by only 'Tomcat' or 'websphere'  
+JVM: #the path to the jvm on JDK installation e.g: 'C:\Program Files\Java\jdk1.7.0_40\jre\bin\server\jvm.dll'
+JAVA_VERSION: #JDK version e.g'1.7.0_40'
+AppServer_Version: # the tomcat or the webspher version '8.5.9'  
+CoreVer: # Alis core version '6.6.3.15'
+ArtifactPath: # the path to the release share folder e.g '\\alisdsgbackup\Alis_Releases\6.2(Projects)\6.6.2.34(tfl)' 
+BackupFolder: # the path for backup before updating e.g '\\alisdsgbackup\Alis_Releases\Backups'
+Base_Deployment_app_server: # the path to the appserver e.g 'C:\Program Files\Apache Software Foundation\'
+Base_Deployment_BL: # the path to the BL deployment'c:\BL\'

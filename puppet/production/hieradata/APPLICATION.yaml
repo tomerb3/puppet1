@@ -1,0 +1,12 @@
+---
+classes:
+  - db
+  
+prerequisite:
+  java:
+    major_version: '7'
+    minor_version: '40'
+    win_oracle_path: '\\fis1\install\Dev Tools\Java\JDK'  
+  
+  vc_rt_path: '\\fis1\install\Dev Tools\VC_RT_2013'
+ 

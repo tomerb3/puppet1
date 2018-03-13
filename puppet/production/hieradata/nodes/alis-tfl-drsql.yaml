@@ -1,0 +1,17 @@
+---
+environments:
+  ALIS: #The env name
+    require_backup: 'no'
+    version: '1.4.15.3'
+    upv_files: 
+      - 'first-updatepreviousversion.sql' #core UPV
+    md_files:
+      - 'second-md_customer_full.sql'
+  ALIS_UAT: #The env name
+    require_backup: 'yes'
+    version: '1.4.15.7'
+    upv_files: 
+      - 'first-updatepreviousversion.sql' #core UPV
+    md_files:
+      - 'second-md_customer_full2.sql'
+      

@@ -1,0 +1,35 @@
+---  
+environments:
+  ENV101: #The env name 
+    RequestQueueName: 'REQUEST.ALIS_UAT'
+    ResponseQueueName: 'RESPONSE.ALIS_UAT'
+    FISDatabase: 'auth_db_uat'
+    db_port: '1433'
+    DB_Server: 'alis-db-sql3'
+    FISUID: 'AlisUser'
+    FISPWD: '8o6tDB5d1jB1H5d2J'
+    MQHostName: 'localhost'
+    MQPort: '61616'
+    sql_pass: 'it12345*'
+    sql_user: 'AlisUser'
+    ad_enabled: 'no'
+    db_list:
+      - 'auth_db_dana' #auth DB
+      - 'dana_puppet_test' #data DB
+    pl:
+      port: '8116'
+      target_war_name: 'alis_pl_uat'
+      services_url: 'http://alis-tfl-drapp:8083/alis_sl_uat'   
+      #in case of SSO please add the following:
+      sso_krb_debug: #capture rhe kerberos errors can by only true or false
+      sso_krb_service_prinicipal: # the domain name
+      sso_krb_keytab_location: # the keytab file for the host path
+      sso_ldapAdServer: #ldap server host name
+      sso_ldapSearchBase: #ldap search pase
+      sso_ldapUsername: #the ldap auth user name
+      sso_ldapPassword: # non encripted pass for thr ldap user      
+    sl:
+      port: '8117'
+      blEvent_inQueueName: 'BL.EVENT.ALIS'    
+      target_war_name: 'alis_sl_uat'
+      integration_userName: 'Clerk'

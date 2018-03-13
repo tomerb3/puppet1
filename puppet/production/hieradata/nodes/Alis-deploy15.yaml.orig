@@ -1,0 +1,34 @@
+---
+environments:
+  ENV16:
+    version: '1.4.15.1'
+    RequestQueueName: 'REQUEST.Q15'
+    ResponseQueueName: 'RESPONSE.Q15'
+    FISDatabase: 'auth_tfl_env15'
+    db_port: '1433'
+    bl:
+      ListenerCount: '10'
+    pl:
+      port: '8108'
+      source_war_name: 'alis_pl.war'
+      services_url: 'http://alis-deploy15:8109/tfl_sl_env16'
+      dateDisplayFormat: 'MM/dd/yyyy'
+      dateInputFormats: 'MM/dd/yy MM/dd/yyyy MMddyy MMddyyyy'
+      currencyDisplayPattern: '$#,##0.00;-$#,##0.00'
+      alis_locale: 'en_US'
+      menu_view: 'shell/menu'
+      alis_theme: 'Alis'
+      about_date_display_format: 'yyyy-MM-dd HH:mm'
+      build_time_date_format: 'yyyyMMdd-HHmm'
+      show_internal_errors: 'true'
+      dev_mode: 'false'
+      enable_sso: 'false'
+    sl:
+      port: '8109'
+      blEvent_inQueueName: 'BL.EVENT.Q15'
+      source_war_name: 'alis_sl.war'
+      integration_userName: 'Clerk'
+      hibernate_schemaValidator: 'true'
+      mvrApplicationActivator: 'active'
+      intelliScriptApplicationActivator: 'active'
+      selfObjectFillerEnabled: 'true'

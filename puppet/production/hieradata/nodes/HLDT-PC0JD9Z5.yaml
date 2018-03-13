@@ -1,0 +1,35 @@
+---
+
+environments:
+  ENV1000:
+    version: '1.4.14'
+    RequestQueueName: 'REQUEST.Q1000'
+    ResponseQueueName: 'RESPONSE.Q1000'
+    FISDatabase: 'auth_tfl_env1000'
+    db_port: '1433'
+    bl:
+      ListenerCount: '10'
+    pl:
+      port: '8080'
+      source_war_name: 'alis_pl.war'
+      services_url: 'http://HLVM-ODED01:8081/tfl_sl_env1000'
+      dateDisplayFormat: 'MM/dd/yyyy'
+      dateInputFormats: 'MM/dd/yy MM/dd/yyyy MMddyy MMddyyyy'
+      currencyDisplayPattern: '$#,##0.00;-$#,##0.00'
+      alis_locale: 'en_US'
+      menu_view: 'shell/menu'
+      alis_theme: 'Alis'
+      about_date_display_format: 'yyyy-MM-dd HH:mm'
+      build_time_date_format: 'yyyyMMdd-HHmm'
+      show_internal_errors: 'true'
+      dev_mode: 'false'
+      enable_sso: 'false'
+    sl:      
+      port: '8081'
+      blEvent_inQueueName: 'BL.EVENT.Q1000'
+      source_war_name: 'alis_sl.war'
+      integration_userName: 'Clerk'
+      hibernate_schemaValidator: 'true'
+      mvrApplicationActivator: 'active'
+      intelliScriptApplicationActivator: 'active'
+      selfObjectFillerEnabled: 'true' 

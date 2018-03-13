@@ -1,0 +1,34 @@
+{
+  "name": "alis-db",
+  "version": "0.1.0",
+  "author": "Tomer",
+  "summary": "Alis DB managment conf",
+  "license": "Apache-2.0",
+  "source": "ssh://git@alis-dsg-pupms/git/puppet.git",
+  "project_page": "http://wiki:8080/display/DSG",
+  "issues_url": "http://wiki:8080/display/DSG",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 4.0.0"
+    }
+    ],
+  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Windows",
+      "operatingsystemrelease": [
+        "Server 2003",
+        "Server 2003 R2",
+        "Server 2008",
+        "Server 2008 R2",
+        "Server 2012",
+        "Server 2012 R2",
+        "7",
+        "8",
+        "10"
+      ]
+    }
+    ]
+}
+

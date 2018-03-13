@@ -1,0 +1,18 @@
+---
+environments:
+  ENV1000: #The env name
+    require_backup: #do we need to backup the env can by only yes or no
+    version: #The alis version to install '1.4.15.1'
+    Db_server: #The DB servr host name'alis-db-sql3'
+    sql_pass: # Non AD SQL password for user that have the correct access to the DB 'it12345*'
+    sql_user: # Non AD SQL user that have the correct access to the DB'AlisUser'
+    ad_enabled: # use AD for the SQL 'no'
+    upv_files: # list of UPV files
+      - 'first-updatepreviousversion.sql' #core UPV
+      - 'second-updatemetadata.sql' #cust UPV
+    md_files: # list of md files
+      - 'third-md_customer_full.sql' 
+      - 'fourth-PROD00334249-data_fix.sql'
+    db_list: # list of DB for update
+      - 'auth_tfl_env9' #auth DB
+      - 'tfl_6631_prod_defs' #data DB

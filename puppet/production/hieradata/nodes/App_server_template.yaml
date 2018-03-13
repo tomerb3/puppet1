@@ -1,0 +1,85 @@
+---
+environments:
+  ENV1000: #The env name
+    require_backup: #do we need to backup the env can by only yes or no
+    version: # the version to deploy e.g '1.4.15'
+    RequestQueueName: # the MQ request queue e.g 'REQUEST.Q1000'
+    ResponseQueueName: # the MQ response queue e.g 'RESPONSE.Q1000'
+    FISDatabase: # the auth db name e.g 'auth_tfl_env1000'
+    FISDBMS: # the SQL server type can be only 'MSS' or 'DB2'
+    java_install_path: #the path to the jre libs e.g 'C:\Program Files (x86)\Java\jdk1.7.0_40\jre\lib'
+    db_port: # the DB listening port e.g '1433'
+    DB_Server: # the db server hostname e.g 'alis-db-sql3'
+    FISUID: # The SQL user 
+    FISPWD: # the encripted password
+    bl:
+      ListenerCount: # the number of BL listeners '10'
+      OCILoggerFolder_base_path: # the path to the BL logs e.g 'c:\ALIS_LOGS'
+      PERF_SETTINGS_base_path: # the path to the perf logs e.g 'c:\ALIS_LOGS'
+    pl:
+      port: # the PL listening port'8080'
+      source_war_name: # the source PL war name 'alis_pl.war'
+      target_war_name: # the name of the war file at the server e.g 'core_pl_ehv1000'
+      services_url: # the SL url e.g 'http://HLVM-ODED01:8081/tfl_sl_env1000'
+      dateDisplayFormat: # the PL date format 'MM/dd/yyyy'
+      dateInputFormats: # the data date foremat 'MM/dd/yy MM/dd/yyyy MMddyy MMddyyyy'
+      currencyDisplayPattern: #currancy '$#,##0.00;-$#,##0.00'
+      alis_locale: # language 'en_US'
+      menu_view: # the PL shell 'shell/menu'
+      alis_theme: # the PL theme to use 'Alis'
+      about_date_display_format: # date display format 'yyyy-MM-dd HH:mm'
+      build_time_date_format: # build date format 'yyyyMMdd-HHmm'
+      show_internal_errors: # show errors 'true'
+      dev_mode: #dev mode 'false'
+      enable_sso: # enable SSO for the PL 'false'
+      services_receiveTimeout: # time out for connecting to the SL default: 18000
+      alisPlLog4jExternalConfigPath: # the path to the log4j config default: '${pl.root}/WEB-INF/conf/alis-pl-log4j.xml'
+      alisPlLogsPath: #the path to the extra logs, default: 'alis-pl-logs'
+      default_company_id: #the default company ID to pass to the SL, default: '1'
+      cacheIntegrityAlertLevel: #default 'KEEP_ORIGINAL_STRINGS' change only after cunsolting ALIS foundation team
+      max_trace_line_length: #default '250000' change only after cunsolting ALIS foundation team
+      #in case of SSO please add the following:
+      sso_krb_debug: #capture rhe kerberos errors can by only true or false
+      sso_krb_service_prinicipal: # the domain name
+      sso_krb_keytab_location: # the keytab file for the host path
+      sso_ldapAdServer: #ldap server host name
+      sso_ldapSearchBase: #ldap search pase
+      sso_ldapUsername: #the ldap auth user name
+      sso_ldapPassword: # non encripted pass for thr ldap user      
+    sl:
+      port: # the SL listening port'8081'
+      blEvent_inQueueName: #the name of the BL MQ queue e.g 'BL.EVENT.Q1000'
+      source_war_name: # the source SL war name e.g 'alis_sl.war'
+      target_war_name: # the name of the war file at the server e.g 'core_pl_ehv1000'
+      integration_userName: # the user for the BL integration e.g 'Clerk'
+      hibernate_schemaValidator: # validate the DB when the SL start can be 'true' or 'false'
+      mvrApplicationActivator: # set the MVR logging 'active' or 'false'
+      intelliScriptApplicationActivator: # set the intelliScriptApplication logging 'active' or 'false'
+      selfObjectFillerEnabled: #set the selfObjectFillerEnabled logging 'true' or 'false'
+      monitor_path: # Set path to external monitoring config, default '/WEB-INF/conf/monitor'
+      mq_path: # Set path to external MQ config, default 'file:${alisSlExternalConfigPath}'
+      spy_path: # Set path to external spy config config, default '${sl.root}/WEB-INF/conf'
+      log4j_path: # Set path to external log4j config config, default '${sl.root}/WEB-INF/conf'
+      integration_companyId: #the default DB to check, default: '1'
+      integration_language: #the default integration_language, default: '1'
+      datasource_maxIdle: #set the number of idle DB connections, default: '50'
+      datasource_minIdle: #set the idle time for DB connection, default '10'
+      datasource_maxActive: #set the max number of DB active connection, default '100'
+      datasource_timeBetweenEvictionRunsMillis: #set time for waiting, default '30000'
+      datasource_minEvictableIdleTimeMillis: #set the idle time, default '60000'
+      datasource_initialSize: #set the DB init size, default '0'
+      taskExecutor_corePoolSize: #set the number of working procs, default '100'
+      taskExecutor_maxPoolSize: #set the max number of procs, default '300'
+      monitoringTaskExecutor.corePoolSize: # monitoring task  '5'
+      monitoringTaskExecutor.maxPoolSize: # monitoring task  '50'
+      monitoring.appendInOutObjects: # monitoring task  'true'
+      
+      
+      
+      
+      
+       
+      
+      
+       
+      
